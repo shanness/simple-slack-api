@@ -14,6 +14,8 @@ public interface ChannelHistoryModule {
 
     List<SlackMessagePosted> fetchHistoryOfChannel(String channelName, LocalDate day, int numberOfMessages);
 
+    SlackMessagePosted fetchSingleMessage(String channelId, String messageId);
+
     List<SlackMessagePosted> fetchUpdatingHistoryOfChannel(String channelId);
     
     List<SlackMessagePosted> fetchUpdatingHistoryOfChannel(String channelId, LocalDate day);
